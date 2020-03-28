@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+</head>
+<body>
+	<form action="#" th:action="@{/afterLyft/discount}" th:object="${trip}"
+		method="POST">
+
+		<h2>Start Address</h2>
+		<input type="text" th:field="*{startStreet}" placeholder="Start Street"><br><br> 
+		<input type="text" th:field="*{startCity}" placeholder="Start City"><br><br>
+		<input type="text" th:field="*{startState}" placeholder="Start State"> <br><br>
+		<input type="text" th:field="*{startZip}" placeholder="Start Zip"> <br><br>
+		<br><br>
+		<h2>End Address</h2>
+		<input type="text" th:field="*{endStreet}" placeholder="End Street"><br><br> 
+		<input type="text" th:field="*{endCity}" placeholder="End City"><br><br>
+		<input type="text" th:field="*{endState}" placeholder="End State"> <br><br>
+		<input type="text" th:field="*{endZip}" placeholder="End Zip"> <br><br>
+		<button type="submit" class="btn btn-info col-2">After Lyft
+			Discount</button>
+
+	</form>
+
+</body>
+</html>
